@@ -3,8 +3,10 @@ pipeline {
     stages { 
         stage('Build') { 
             steps { 
+
 			echo 'hello maven'
 			bat ' mvn -f demo/pom.xml clean install'
+
 
 
             }
