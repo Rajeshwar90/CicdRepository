@@ -1,16 +1,12 @@
 pipeline { 
     agent any  
     stages { 
-        stage ('SCM Checkout') {
-         checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: '91e1fc24-d2e7-475b-b06e-77fa66ca65fb', url: 'https://github.com/Rajeshwar90/CicdRepository.git']]])
-        
-        }
-      } 
         stage('Build') { 
             steps { 
                echo 'This is a minimal pipeline.'
                sh 'mvn clean package'
             }
-        }
-    
+        }   
+        
+    }
 }
