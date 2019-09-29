@@ -4,8 +4,10 @@ pipeline {
         stage('Build') { 
             steps { 
 
-			   sh 'cd demo/'
+			   sh 'cd demo'
+			   sh 'ls -al'
                sh '/usr/share/maven/bin/mvn install'
+
 
 
 
