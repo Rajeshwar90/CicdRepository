@@ -3,9 +3,10 @@ pipeline {
     stages { 
         stage('Build') { 
             steps { 
-			echo 'hello maven'
+
 			   sh 'cd demo/'
-               sh 'mvn install'
+               sh '/usr/share/maven/bin/mvn install'
+
 
 
             }
