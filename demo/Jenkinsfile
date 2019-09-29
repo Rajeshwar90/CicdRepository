@@ -2,11 +2,10 @@ pipeline {
     agent any  
     stages { 
         stage('Build') { 
-            steps { 
 
-			   sh 'cd demo'
-			   sh 'ls -al'
-               sh '/usr/share/maven/bin/mvn install'
+            steps {
+            
+               sh 'cd demo ls -al /usr/share/maven/bin/mvn install'
 
 
             }
