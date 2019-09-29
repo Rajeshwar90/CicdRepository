@@ -5,7 +5,13 @@ pipeline {
 
             steps {
             
-               sh 'cd demo ls -al /usr/share/maven/bin/mvn clean install package'
+
+               sh """ 
+               cd demo 
+               ls -al 
+               /usr/share/maven/bin/mvn clean install package
+               """
+
 
 
             }
